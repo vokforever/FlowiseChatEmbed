@@ -904,7 +904,9 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                 {recordingNotSupported() ? (
                   <div class="w-full flex items-center justify-between p-4 border border-[#eeeeee]">
                     <div class="w-full flex items-center justify-between gap-3">
-                      <span class="text-base">Для записи звука используйте современные браузеры, такие как Chrome или Firefox, которые поддерживают запись звука.</span>
+                      <span class="text-base">
+                        Для записи звука используйте современные браузеры, такие как Chrome или Firefox, которые поддерживают запись звука.
+                      </span>
                       <button
                         class="py-2 px-4 justify-center flex items-center bg-red-500 text-white rounded-md"
                         type="button"
