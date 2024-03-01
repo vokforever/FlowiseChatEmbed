@@ -77,7 +77,7 @@ export type BotProps = {
   observersConfig?: observersConfigType;
 };
 
-const defaultWelcomeMessage = 'Hi there! How can I help?';
+const defaultWelcomeMessage = 'Здравствуйте! Чем я могу помочь?';
 
 /*const sourceDocuments = [
     {
@@ -749,13 +749,13 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
             class="absolute top-0 left-0 bottom-0 right-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm text-white z-40 gap-2 border-2 border-dashed"
             style={{ 'border-color': props.bubbleBackgroundColor }}
           >
-            <h2 class="text-xl font-semibold">Drop here to upload</h2>
+            <h2 class="text-xl font-semibold">Переместите сюда для загрузки</h2>
             <For each={uploadsConfig()?.imgUploadSizeAndTypes}>
               {(allowed) => {
                 return (
                   <>
                     <span>{allowed.fileTypes?.join(', ')}</span>
-                    <span>Max Allowed Size: {allowed.maxUploadSize} MB</span>
+                    <span>Максимально допустимый размер: {allowed.maxUploadSize} MB</span>
                   </>
                 );
               }}
@@ -904,13 +904,13 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                 {recordingNotSupported() ? (
                   <div class="w-full flex items-center justify-between p-4 border border-[#eeeeee]">
                     <div class="w-full flex items-center justify-between gap-3">
-                      <span class="text-base">To record audio, use modern browsers like Chrome or Firefox that support audio recording.</span>
+                      <span class="text-base">Для записи звука используйте современные браузеры, такие как Chrome или Firefox, которые поддерживают запись звука.</span>
                       <button
                         class="py-2 px-4 justify-center flex items-center bg-red-500 text-white rounded-md"
                         type="button"
                         onClick={() => onRecordingCancelled()}
                       >
-                        Okay
+                        Ok
                       </button>
                     </div>
                   </div>
@@ -929,11 +929,11 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                         <CircleDotIcon color="red" />
                       </span>
                       <span>{elapsedTime() || '00:00'}</span>
-                      {isLoadingRecording() && <span class="ml-1.5">Sending...</span>}
+                      {isLoadingRecording() && <span class="ml-1.5">Отправляю...</span>}
                     </div>
                     <div class="flex items-center">
                       <CancelButton buttonColor={props.textInput?.sendButtonColor} type="button" class="m-0" on:click={onRecordingCancelled}>
-                        <span style={{ 'font-family': 'Poppins, sans-serif' }}>Send</span>
+                        <span style={{ 'font-family': 'Poppins, sans-serif' }}>Отправить</span>
                       </CancelButton>
                       <SendButton
                         sendButtonColor={props.textInput?.sendButtonColor}
@@ -942,7 +942,7 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
                         class="m-0"
                         on:click={onRecordingStopped}
                       >
-                        <span style={{ 'font-family': 'Poppins, sans-serif' }}>Send</span>
+                        <span style={{ 'font-family': 'Poppins, sans-serif' }}>Отправить</span>
                       </SendButton>
                     </div>
                   </div>
